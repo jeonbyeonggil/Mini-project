@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif; /* 변경된 폰트 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+#calendar-container {
+  background-image: url("./starry-sky-2051448_1920.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+#calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  width: 14.28%;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid white;
+  color: white;
+}
+
+td {
+  cursor: pointer;
+}
+
+#event-form {
+  margin-top: 20px;
+}
+
+#event-form input {
+  margin: 5px 0;
+  padding: 5px;
+  width: 100%;
+}
+
+h3 {
+  color: white;
+  font-weight: bold;
+}
+
+#add-event-form {
+  color: white;
+}
+
+#month-year {
+  color: white;
+  font-weight: bold;
+}
+
+button {
+  position: relative;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden; /* 가상 요소가 버튼 밖으로 나가지 않도록 */
+}
+
+/* 버튼 호버 상태 */
+button:hover::after {
+  content: ""; /* 가상 요소 생성 */
+  position: absolute;
+  bottom: -5px; /* 버튼 아래에 위치 */
+  left: 0;
+  width: 100%;
+  height: 2px; /* 선의 두께 */
+  background-color: white; /* 선의 색상 */
+  animation: appear 0.3s ease-in-out; /* 애니메이션 효과 */
+}
+
+/* 애니메이션 효과 정의 */
+@keyframes appear {
+  from {
+    transform: scaleX(0); /* 시작 시 선이 보이지 않음 */
+  }
+  to {
+    transform: scaleX(1); /* 최종 상태는 선이 완전히 나타남 */
+  }
+}
+
+/* 버튼에 대한 호버 효과 */
+button:hover {
+  color: white; /* 글자색 */
+  text-decoration: underline; /* 밑줄 */
+}

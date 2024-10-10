@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <!-- 작업 시작 -->
+  <body>
+    <div id="calendar-container">
+      <div id="calendar-header">
+        <button id="prev">Previous</button>
+        <h2 id="month-year"></h2>
+        <button id="next">Next</button>
+      </div>
+      <!-- 테이블 작업 시작 -->
+      <table id="calendar">
+        <thead>
+          <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+        </thead>
+        <tbody id="calendar-body">
+          <!-- 여기서 날짜 표시됨. -->
+        </tbody>
+      </table>
+      <!-- 테이블 작업 종료 -->
+      <div id="event-form">
+        <!-- 이벤트 폼 작업 시작 -->
+        <h3>Add Event</h3>
+        <form id="add-event-form">
+          <label for="event-date">Date:</label>
+          <input type="date" id="event-date" required />
+          <label for="event-desc">Description:</label>
+          <input type="text" id="event-desc" required />
+          <button type="submit">Add Event</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
